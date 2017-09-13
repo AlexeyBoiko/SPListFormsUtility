@@ -35,113 +35,13 @@ $(document).ready(function () {
 });
 ```
 
-## Examples
+## Some examples
 ```js
-//
-// SPFieldText
-
-// 'Title' - internal field name
-var field = new Igotta.StandartListFormsUtility.ListField('Title');
-
-// set value
-field.setValue('TEST');
-
-// get value
-alert(field.getValue());
-
-// hide all row
-field.hide();
-
-// hide control
-field.hideDefaultControl();
-
-// disable
-field.disable();
-
-// paint control background
-var fieldTd = field.getCol();
-$(fieldTd).css('background-color', 'red');
-
-// paint control
-var fieldControl = field.getControl();
-$(fieldControl).css('background-color', 'green');
-
-// get internal name
-alert(field.getName());
-
-// get field type, will return 'SPFieldText'
-alert(field.getType());
-
-
-//
-// SPFieldLookup
-
-// 'Lookup' - internal field name
-var field = new Igotta.StandartListFormsUtility.ListField('incType');
-
-// set value, 1 - is ID of lookup list element
-field.setValue(1);
-
-// get value, return ID of selected list element
-console.log(field.getValue());
-
-// make available only elements with specified ids
-field.filterLookup([1]);
-
-// clear filter - show all options
-field.filterLookupClear();
-
-// set OnChangeHandler
-field.setOnChangeHandler(function (senderField) { console.log(senderField.getValue()); });
-
-// all examples for SPFieldText is applicable
-
-
-//
-// SPFieldLookupMulti (currently support only one method - filterLookupMulti)
-
-// 'LookupMulti' - internal filed name
-var field = new Igotta.StandartListFormsUtility.ListField('LookupMulti');
-
-// make available only elements with specified ids 
-field.filterLookupMulti([1, 2, 6]);
-
-
-//
-// SPFieldDateTime (applicable for all cultures)
-
-// 'Date' - internal field name
-var field = new Igotta.StandartListFormsUtility.ListField('Date');
-
-// set value
-field.setValue(new Date());
-
-// get value, will return Date object
-alert(field.getValue());
-
-// all examples for SPFieldText is applicable
-
-
-//
-// SPFieldBoolean
-
-// 'Bool' - internal field name
-var field = new Igotta.StandartListFormsUtility.ListField('Bool');
-
-// set value
-field.setValue(true);
-
-// get value
-alert(field.getValue());
-
-// all examples for SPFieldText is applicable
-
-
 //
 //SPFieldBusinessData
 
 var field = new Igotta.StandartListFormsUtility.SPFieldBusinessData('bcs');
-field.setValue('__bg40002300', 'Департамент ИТ', 'Title');
+field.setValue('__bg40002300', 'Department IT', 'Title');
 
 
 //
